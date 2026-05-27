@@ -95,3 +95,4 @@ folderIcon.IconFrame.Parent = ScreenGui -- ... Parent to your UI
 - [SF Symbols](https://sf-symbols-one.vercel.app/)
 - [Gravity UI Icons](https://gravity-ui.com/ru/icons)
 - [Google material Icons](https://fonts.google.com/icons)
+- [Hero Icons](https://heroicons.com)
