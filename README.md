@@ -96,3 +96,4 @@ folderIcon.IconFrame.Parent = ScreenGui -- ... Parent to your UI
 - [Gravity UI Icons](https://gravity-ui.com/ru/icons)
 - [Google material Icons](https://fonts.google.com/icons)
 - [Hero Icons](https://heroicons.com)
+- [Feather Icons](https://feathericons.com)
