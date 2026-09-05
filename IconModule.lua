@@ -18,6 +18,7 @@ local iconModule = {
 		gravity = loadstring(httpGet("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/gravity/dist/Icons.lua"))(),
 		googlematerial = loadstring(httpGet("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/GoogleMaterialIcons/dist/Icons.lua"))(),
 		hero = loadstring(httpGet("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/hero/dist/Icons.lua"))(),
+		Feather = loadstring(httpGet("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/Feather/dist/Icons.lua"))(),
 	},
 }
 
