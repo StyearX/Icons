@@ -44,7 +44,6 @@ local IconModule = {
 		hero = loadstring(
 			Get("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/hero/dist/Icons.lua")
 		)(),
-	},
         Feather = loadstring(
 			Get("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/Feather/dist/Icons.lua")
 		)(),
