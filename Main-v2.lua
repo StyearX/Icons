@@ -13,6 +13,8 @@ local function Get(url)
 	end
 end
 
+local BASE = "https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/"
+
 local IconModule = {
 	IconsType = "lucide",
 
@@ -20,33 +22,27 @@ local IconModule = {
 	IconThemeTag = nil,
 
 	Icons = {
-		lucide = loadstring(
-			Get("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/lucide/dist/Icons.lua")
-		)(),
-		solar = loadstring(
-			Get("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/solar/dist/Icons.lua")
-		)(),
-		craft = loadstring(
-			Get("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/craft/dist/Icons.lua")
-		)(),
-		geist = loadstring(
-			Get("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/geist/dist/Icons.lua")
-		)(),
-		sfsymbols = loadstring(
-			Get("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/sfsymbols/dist/Icons.lua")
-		)(),
-		gravity = loadstring(
-			Get("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/gravity/dist/Icons.lua")
-		)(),
-		googlematerial = loadstring(
-			Get("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/GoogleMaterialIcons/dist/Icons.lua")
-		)(),
-		hero = loadstring(
-			Get("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/hero/dist/Icons.lua")
-		)(),
-        Feather = loadstring(
-			Get("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/Feather/dist/Icons.lua")
-		)(),
+		lucide = loadstring(Get(BASE .. "lucide/dist/Icons.lua"))(),
+		solar = loadstring(Get(BASE .. "solar/dist/Icons.lua"))(),
+		craft = loadstring(Get(BASE .. "craft/dist/Icons.lua"))(),
+		geist = loadstring(Get(BASE .. "geist/dist/Icons.lua"))(),
+		sfsymbols = loadstring(Get(BASE .. "sfsymbols/dist/Icons.lua"))(),
+		gravity = loadstring(Get(BASE .. "gravity/dist/Icons.lua"))(),
+		googlematerial = loadstring(Get(BASE .. "GoogleMaterialIcons/dist/Icons.lua"))(),
+		hero = loadstring(Get(BASE .. "hero/dist/Icons.lua"))(),
+		feather = loadstring(Get(BASE .. "Feather/dist/Icons.lua"))(),
+		bootstrap = loadstring(Get(BASE .. "Bootstrap/dist/Icons.lua"))(),
+		phosphor = loadstring(Get(BASE .. "Phosphor/dist/Icons.lua"))(),
+		tabler = loadstring(Get(BASE .. "Tabler/dist/Icons.lua"))(),
+		["fluent.filled"] = loadstring(Get(BASE .. "Fluent/dist/Variant/Filled/Icons.lua"))(),
+		["fluent.outlined"] = loadstring(Get(BASE .. "Fluent/dist/Variant/Outlined/Icons.lua"))(),
+		["myna.regular"] = loadstring(Get(BASE .. "MynaUi/dist/Variant/Regular/Icons.lua"))(),
+		["myna.solid"] = loadstring(Get(BASE .. "MynaUi/dist/Variant/Solid/Icons.lua"))(),
+		["weui.filled"] = loadstring(Get(BASE .. "WeUi/dist/Variant/Filled/Icons.lua"))(),
+		["weui.outlined"] = loadstring(Get(BASE .. "WeUi/dist/Variant/Outlined/Icons.lua"))(),
+		pixelart = loadstring(Get(BASE .. "PixelArtsIcons/dist/Icons.lua"))(),
+		prime = loadstring(Get(BASE .. "Prime icons/dist/Icons.lua"))(),
+	},
 }
 
 local function parseIconString(iconString)
@@ -228,90 +224,7 @@ function IconModule.Image(IconConfig)
 			for _, part in next, IconLabel[2].Parts do
 				local IconPartLabel = IconModule.Icon(part, Icon.Type)
 
-				local IconPart = Instance.New("ImageLabel")
-				IconPart.Size = UDim2.new(1, 0, 1, 0)
-				IconPart.BackgroundTransparency = 1
-				IconPart.ImageColor3 = Colors[1 + _].Color
-				IconPart.Image = IconPartLabel[1]
-				IconPart.ImageRectSize = IconPartLabel[2].ImageRectSize
-				IconPart.ImageRectOffset = IconPartLabel[2].ImageRectPosition
-				IconPart.Parent = IconFrame
-			end
-		end
-
-		Icon.IconFrame = IconFrame
-	end
-
-	return Icon
-end
-
-return IconModuleor3.new(1, 1, 1) },
-		Size = IconConfig.Size or UDim2.new(0, 24, 0, 24),
-
-		IconFrame = nil,
-	}
-
-	local Colors = {}
-
-	for _, color in next, Icon.Colors do
-		Colors[_] = {
-			ThemeTag = typeof(color) == "string" and color,
-			Color = typeof(color) == "Color3" and color,
-		}
-	end
-
-	local IconLabel = IconModule.Icon2(Icon.Icon, Icon.Type)
-	local isrbxassetid = typeof(IconLabel) == "string" and string.find(IconLabel, "rbxassetid://")
-
-	if IconModule.New then
-		local New = IconModule.New
-
-		local IconFrame = New("ImageLabel", {
-			Size = Icon.Size,
-			BackgroundTransparency = 1,
-			ImageColor3 = Colors[1].Color or nil,
-			ThemeTag = Colors[1].ThemeTag and {
-				ImageColor3 = Colors[1].ThemeTag,
-			},
-			Image = isrbxassetid and IconLabel or IconLabel[1],
-			ImageRectSize = isrbxassetid and nil or IconLabel[2].ImageRectSize,
-			ImageRectOffset = isrbxassetid and nil or IconLabel[2].ImageRectPosition,
-		})
-
-		if not isrbxassetid and IconLabel[2].Parts then
-			for _, part in next, IconLabel[2].Parts do
-				local IconPartLabel = IconModule.Icon(part, Icon.Type)
-
-				local IconPart = New("ImageLabel", {
-					Size = UDim2.new(1, 0, 1, 0),
-					BackgroundTransparency = 1,
-					ImageColor3 = Colors[1 + _].Color or nil,
-					ThemeTag = Colors[1 + _].ThemeTag and {
-						ImageColor3 = Colors[1 + _].ThemeTag,
-					},
-					Image = IconPartLabel[1],
-					ImageRectSize = IconPartLabel[2].ImageRectSize,
-					ImageRectOffset = IconPartLabel[2].ImageRectPosition,
-					Parent = IconFrame,
-				})
-			end
-		end
-
-		Icon.IconFrame = IconFrame
-	else
-		local IconFrame = Instance.new("ImageLabel")
-		IconFrame.Size = Icon.Size
-		IconFrame.BackgroundTransparency = 1
-		IconFrame.ImageColor3 = Colors[1].Color
-		IconFrame.Image = isrbxassetid and IconLabel or IconLabel[1]
-		IconFrame.ImageRectSize = isrbxassetid and nil or IconLabel[2].ImageRectSize
-		IconFrame.ImageRectOffset = isrbxassetid and nil or IconLabel[2].ImageRectPosition
-
-		if not isrbxassetid and IconLabel[2].Parts then
-			for _, part in next, IconLabel[2].Parts do
-				local IconPartLabel = IconModule.Icon(part, Icon.Type)
-
-				local IconPart = Instance.New("ImageLabel")
+				local IconPart = Instance.new("ImageLabel")
 				IconPart.Size = UDim2.new(1, 0, 1, 0)
 				IconPart.BackgroundTransparency = 1
 				IconPart.ImageColor3 = Colors[1 + _].Color

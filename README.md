@@ -43,7 +43,7 @@ Icons.SetIconsType("geist")
 -- Create simple icon
 local houseIcon = Icons.Image({
     Icon = "accessibility-unread", -- Default Geist icon
-    Colors = { PrimaryColor, SecondaryColor }
+    Colors = { PrimaryColor, SecondaryColor },
     Size = UDim2.new(0, 32, 0, 32)
 })
 
@@ -86,14 +86,24 @@ houseIcon.IconFrame.Parent = ScreenGui -- ... Parent to your UI
 folderIcon.IconFrame.Parent = ScreenGui -- ... Parent to your UI
 ```
 
-### Available Icons (Credits)
+### Available Icon Packs (Credits)
 
-- [Lucide Icons](https://github.com/lucide-icons/lucide)
-- [Craft Icons](https://www.figma.com/community/file/1415718327120418204)
-- [Geist Icons](https://vercel.com/geist/icons)
-- [Solar Icons](https://icones.js.org/collection/solar)
-- [SF Symbols](https://sf-symbols-one.vercel.app/)
-- [Gravity UI Icons](https://gravity-ui.com/ru/icons)
-- [Google material Icons](https://fonts.google.com/icons)
-- [Hero Icons](https://heroicons.com)
-- [Feather Icons](https://feathericons.com)
+| Pack | Key | Icons | Variant | License |
+|------|-----|------:|---------|---------|
+| [Lucide](https://github.com/lucide-icons/lucide) | `lucide` | — | — | ISC |
+| [Craft Icons](https://www.figma.com/community/file/1415718327120418204) | `craft` | — | — | MIT |
+| [Geist Icons](https://vercel.com/geist/icons) | `geist` | — | — | MIT |
+| [Solar Icons](https://icones.js.org/collection/solar) | `solar` | — | — | CC BY 4.0 |
+| [SF Symbols](https://sf-symbols-one.vercel.app/) | `sfsymbols` | — | — | — |
+| [Gravity UI Icons](https://gravity-ui.com/ru/icons) | `gravity` | — | — | MIT |
+| [Google Material Icons](https://fonts.google.com/icons) | `googlematerial` | — | — | Apache 2.0 |
+| [Hero Icons](https://heroicons.com) | `hero` | — | — | MIT |
+| [Feather Icons](https://feathericons.com) | `feather` | — | — | MIT |
+| [Bootstrap Icons](https://icons.getbootstrap.com) | `bootstrap` | 2,076 | — | MIT |
+| [Phosphor Icons](https://phosphoricons.com) | `phosphor` | 1,511 | — | MIT |
+| [Tabler Icons](https://tabler.io/icons) | `tabler` | 5,127 | — | MIT |
+| [Fluent UI Icons](https://github.com/microsoft/fluentui-system-icons) | `fluent.filled` `fluent.outlined` | 1,493 / 1,490 | Filled / Outlined | MIT |
+| [MynaUI Icons](https://mynaui.com/icons) | `myna.regular` `myna.solid` | 1,310 / 1,310 | Regular / Solid | MIT |
+| [WeUI Icons](https://github.com/Tencent/weui-icon) | `weui.filled` `weui.outlined` | 81 / 81 | Filled / Outlined | MIT |
+| [PixelArt Icons](https://pixelarticons.com) | `pixelart` | 1,036 | — | MIT |
+| [Prime Icons](https://primeng.org/icons) | `prime` | 313 | — | MIT |

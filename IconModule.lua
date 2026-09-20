@@ -8,17 +8,30 @@ local function httpGet(url)
 	end
 end
 
+local BASE = "https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/"
+
 local iconModule = {
 	icons = {
-		lucide = loadstring(httpGet("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/lucide/dist/Icons.lua"))(),
-		solar = loadstring(httpGet("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/solar/dist/Icons.lua"))(),
-		craft = loadstring(httpGet("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/craft/dist/Icons.lua"))(),
-		geist = loadstring(httpGet("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/geist/dist/Icons.lua"))(),
-		sfsymbols = loadstring(httpGet("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/sfsymbols/dist/Icons.lua"))(),
-		gravity = loadstring(httpGet("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/gravity/dist/Icons.lua"))(),
-		googlematerial = loadstring(httpGet("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/GoogleMaterialIcons/dist/Icons.lua"))(),
-		hero = loadstring(httpGet("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/hero/dist/Icons.lua"))(),
-		Feather = loadstring(httpGet("https://raw.githubusercontent.com/StyearX/Icons/refs/heads/main/Feather/dist/Icons.lua"))(),
+		lucide         = loadstring(httpGet(BASE .. "lucide/dist/Icons.lua"))(),
+		solar          = loadstring(httpGet(BASE .. "solar/dist/Icons.lua"))(),
+		craft          = loadstring(httpGet(BASE .. "craft/dist/Icons.lua"))(),
+		geist          = loadstring(httpGet(BASE .. "geist/dist/Icons.lua"))(),
+		sfsymbols      = loadstring(httpGet(BASE .. "sfsymbols/dist/Icons.lua"))(),
+		gravity        = loadstring(httpGet(BASE .. "gravity/dist/Icons.lua"))(),
+		googlematerial = loadstring(httpGet(BASE .. "GoogleMaterialIcons/dist/Icons.lua"))(),
+		hero           = loadstring(httpGet(BASE .. "hero/dist/Icons.lua"))(),
+		feather        = loadstring(httpGet(BASE .. "Feather/dist/Icons.lua"))(),
+		bootstrap      = loadstring(httpGet(BASE .. "Bootstrap/dist/Icons.lua"))(),
+		phosphor       = loadstring(httpGet(BASE .. "Phosphor/dist/Icons.lua"))(),
+		tabler         = loadstring(httpGet(BASE .. "Tabler/dist/Icons.lua"))(),
+		["fluent.filled"]   = loadstring(httpGet(BASE .. "Fluent/dist/Variant/Filled/Icons.lua"))(),
+		["fluent.outlined"] = loadstring(httpGet(BASE .. "Fluent/dist/Variant/Outlined/Icons.lua"))(),
+		["myna.regular"]    = loadstring(httpGet(BASE .. "MynaUi/dist/Variant/Regular/Icons.lua"))(),
+		["myna.solid"]      = loadstring(httpGet(BASE .. "MynaUi/dist/Variant/Solid/Icons.lua"))(),
+		["weui.filled"]     = loadstring(httpGet(BASE .. "WeUi/dist/Variant/Filled/Icons.lua"))(),
+		["weui.outlined"]   = loadstring(httpGet(BASE .. "WeUi/dist/Variant/Outlined/Icons.lua"))(),
+		pixelart       = loadstring(httpGet(BASE .. "PixelArtsIcons/dist/Icons.lua"))(),
+		prime          = loadstring(httpGet(BASE .. "Prime icons/dist/Icons.lua"))(),
 	},
 }
 
@@ -103,19 +116,19 @@ local rectSupportedClasses = {
 }
 
 local propertyMap = {
-	ImageLabel = { "Image" },
-	ImageButton = { "Image" },
-	Decal = { "Texture" },
-	Texture = { "Texture" },
-	MeshPart = { "TextureID" },
+	ImageLabel       = { "Image" },
+	ImageButton      = { "Image" },
+	Decal            = { "Texture" },
+	Texture          = { "Texture" },
+	MeshPart         = { "TextureID" },
 	SurfaceAppearance = { "ColorMap", "MetalnessMap", "NormalMap", "RoughnessMap" },
-	Sky = { "SkyboxBk", "SkyboxDn", "SkyboxFt", "SkyboxLf", "SkyboxRt", "SkyboxUp", "MoonTextureId", "SunTextureId" },
-	Shirt = { "Texture" },
-	Pants = { "Texture" },
-	ShirtGraphic = { "Graphic" },
-	ParticleEmitter = { "Texture" },
-	Beam = { "Texture" },
-	Trail = { "Texture" },
+	Sky              = { "SkyboxBk", "SkyboxDn", "SkyboxFt", "SkyboxLf", "SkyboxRt", "SkyboxUp", "MoonTextureId", "SunTextureId" },
+	Shirt            = { "Texture" },
+	Pants            = { "Texture" },
+	ShirtGraphic     = { "Graphic" },
+	ParticleEmitter  = { "Texture" },
+	Beam             = { "Texture" },
+	Trail            = { "Texture" },
 }
 
 local watching = {}
