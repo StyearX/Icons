@@ -104,6 +104,6 @@ folderIcon.IconFrame.Parent = ScreenGui -- ... Parent to your UI
 | [Tabler Icons](https://tabler.io/icons) | `tabler` | 5,127 | — | MIT |
 | [Fluent UI Icons](https://github.com/microsoft/fluentui-system-icons) | `fluent.filled` `fluent.outlined` | 1,493 / 1,490 | Filled / Outlined | MIT |
 | [MynaUI Icons](https://mynaui.com/icons) | `myna.regular` `myna.solid` | 1,310 / 1,310 | Regular / Solid | MIT |
-| [WeUI Icons](https://github.com/Tencent/weui-icon) | `weui.filled` `weui.outlined` | 81 / 81 | Filled / Outlined | MIT |
+| [WeUI Icons](https://github.com/weui/weui-icon) | `weui.filled` `weui.outlined` | 81 / 81 | Filled / Outlined | MIT |
 | [PixelArt Icons](https://pixelarticons.com) | `pixelart` | 1,036 | — | MIT |
 | [Prime Icons](https://primeng.org/icons) | `prime` | 313 | — | MIT |
