@@ -41,7 +41,7 @@ local IconModule = {
 		["weui.filled"] = loadstring(Get(BASE .. "WeUi/dist/Variant/Filled/Icons.lua"))(),
 		["weui.outlined"] = loadstring(Get(BASE .. "WeUi/dist/Variant/Outlined/Icons.lua"))(),
 		pixelart = loadstring(Get(BASE .. "PixelArtsIcons/dist/Icons.lua"))(),
-		prime = loadstring(Get(BASE .. "Prime icons/dist/Icons.lua"))(),
+		prime = loadstring(Get(BASE .. "Prime-icons/dist/Icons.lua"))(),
 	},
 }
 
