@@ -71,6 +71,13 @@ end
 
 local loadedPacks = {}
 
+local function buildPack(result)
+	if type(result) == "table" and result.Icons then
+		return { _sprites = result.Spritesheets or {}, _icons = result.Icons }
+	end
+	return result
+end
+
 local function loadPack(cacheKey, url)
 	if loadedPacks[cacheKey] then return loadedPacks[cacheKey] end
 
@@ -87,13 +94,7 @@ local function loadPack(cacheKey, url)
 		diskWrite(cacheKey, body)
 	end
 
-	local pack
-	if type(result) == "table" and result.Icons then
-		pack = { _sprites = result.Spritesheets or {}, _icons = result.Icons }
-	else
-		pack = result
-	end
-
+	local pack = buildPack(result)
 	loadedPacks[cacheKey] = pack
 	return pack
 end
@@ -148,8 +149,10 @@ local function resolveIcon(path)
 		local icon = pack._icons[iconName]
 		if not icon then return nil end
 
-		local sheetKey = tostring(icon.Image)
-		local imageUrl = pack._sprites[sheetKey] or sheetKey
+		-- FIX: coba integer key dulu, baru string key
+		local imageUrl = pack._sprites[icon.Image]
+			or pack._sprites[tostring(icon.Image)]
+			or tostring(icon.Image)
 		local offset = icon.ImageRectOffset or icon.ImageRectPosition or Vector2.zero
 		local size   = icon.ImageRectSize or Vector2.zero
 
